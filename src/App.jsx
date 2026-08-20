@@ -1,24 +1,24 @@
 import { useEffect, useState } from "react";
 
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Destinations from "./components/Destinations";
-import PopularDestinations from "./components/PopularDestinations";
-import Gallery from "./components/Gallery";
-import Services from "./components/Services";
-import WhyTravel from "./components/WhyTravel";
-import About from "./components/About";
-import Testimonials from "./components/Testimonials";
-import Blog from "./components/Blog";
-import Contact from "./components/Contact";
-import WhatsAppButton from "./components/WhatsAppButton";
-import Footer from "./components/Footer";
-import BackToTop from "./components/BackToTop";
-import BookingModal from "./components/BookingModal";
+import Navbar from "./components/navbar";
+import Hero from "./components/hero";
+import Destinations from "./components/destinations";
+import PopularDestinations from "./components/populardestinations";
+import Gallery from "./components/gallery";
+import Services from "./components/services";
+import WhyTravel from "./components/whytravel";
+import About from "./components/about";
+import Testimonials from "./components/testimonials";
+import Blog from "./components/blog";
+import Contact from "./components/contact";
+import WhatsAppButton from "./components/whatsappbutton";
+import Footer from "./components/footer";
+import BackToTop from "./components/backtotop";
+import BookingModal from "./components/bookingmodal";
 
-import IndiaPage from "./pages/IndiaPage";
-import NepalPage from "./pages/NepalPage";
-import ThailandPage from "./pages/ThailandPage";
+import IndiaPage from "./pages/indiapage";
+import NepalPage from "./pages/nepalpage";
+import ThailandPage from "./pages/thailandpage";
 
 function App() {
   const [booking, setBooking] = useState(null);

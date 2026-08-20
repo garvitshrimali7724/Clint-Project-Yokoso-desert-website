@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { indiaDestinations } from "../data/india";
-import BookingModal from "../components/BookingModal";
+import BookingModal from "../components/bookingmodal";
 
 function IndiaPage() {
   const [search, setSearch] = useState("");
