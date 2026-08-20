@@ -1,0 +1,184 @@
+/* =========================================
+   POPULAR DESTINATIONS
+========================================= */
+
+.popular-destinations {
+  padding: 110px 5%;
+  background: #ffffff;
+}
+
+.popular-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.popular-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  margin-bottom: 55px;
+}
+
+.popular-heading h2 {
+  margin: 12px 0 0;
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 1.05;
+}
+
+.popular-heading p {
+  max-width: 470px;
+  margin: 0;
+  line-height: 1.7;
+}
+
+.popular-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.popular-card {
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  background: #fff;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.popular-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.popular-image-wrapper {
+  position: relative;
+  height: 290px;
+  overflow: hidden;
+}
+
+.popular-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+
+.popular-card:hover .popular-image {
+  transform: scale(1.06);
+}
+
+.popular-number {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+
+  padding: 7px 11px;
+
+  border-radius: 8px;
+
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.popular-content {
+  padding: 25px;
+}
+
+.popular-location {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  opacity: 0.6;
+}
+
+.popular-content h3 {
+  margin: 0 0 12px;
+  font-size: 30px;
+}
+
+.popular-content p {
+  margin: 0 0 22px;
+
+  line-height: 1.65;
+  font-size: 14px;
+}
+
+.popular-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding-top: 18px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.popular-bottom strong {
+  font-size: 18px;
+}
+
+.popular-bottom button {
+  border: 0;
+  background: transparent;
+
+  cursor: pointer;
+
+  font-weight: 600;
+  font-size: 14px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .popular-destinations {
+    padding: 70px 18px;
+  }
+
+  .popular-heading {
+    display: block;
+    margin-bottom: 35px;
+  }
+
+  .popular-heading p {
+    margin-top: 18px;
+  }
+
+  .popular-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .popular-image-wrapper {
+    height: 250px;
+  }
+
+  .popular-content {
+    padding: 21px;
+  }
+
+  .popular-content h3 {
+    font-size: 27px;
+  }
+
+  .popular-bottom {
+    align-items: flex-start;
+  }
+
+}

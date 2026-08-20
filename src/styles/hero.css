@@ -1,0 +1,311 @@
+/* =================================
+   HERO
+================================= */
+
+.hero {
+  position: relative;
+
+  min-height: 100svh;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background: var(--color-deep-blue);
+
+  color: var(--color-white);
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  animation: heroZoom 18s ease-out infinite alternate;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 17, 35, 0.88) 0%,
+      rgba(5, 17, 35, 0.62) 42%,
+      rgba(5, 17, 35, 0.30) 100%
+    );
+
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  padding-top: 84px;
+  padding-bottom: 100px;
+}
+
+.hero-copy {
+  max-width: 760px;
+
+  animation: heroContentIn 900ms ease both;
+}
+
+.hero-eyebrow {
+  margin-bottom: 24px;
+
+  color: var(--color-gold-light);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.22em;
+}
+
+.hero-title {
+  margin: 0;
+
+  font-family: var(--font-heading);
+
+  color: var(--color-white);
+
+  font-size: clamp(
+    58px,
+    8vw,
+    112px
+  );
+
+  font-weight: 500;
+
+  line-height: 0.94;
+
+  letter-spacing: -0.035em;
+}
+
+.hero-title span {
+  color: var(--color-gold-light);
+}
+
+.hero-description {
+  max-width: 590px;
+
+  margin-top: 32px;
+
+  color: rgba(255, 255, 255, 0.86);
+
+  font-size: clamp(17px, 1.5vw, 21px);
+
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: 38px;
+}
+
+.hero-button {
+  min-height: 52px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding-inline: 28px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+
+  transition:
+    transform var(--transition-fast),
+    background var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.hero-button:hover {
+  transform: translateY(-3px);
+}
+
+.hero-button-primary {
+  background: var(--color-white);
+
+  color: var(--color-deep-blue);
+}
+
+.hero-button-primary:hover {
+  background: var(--color-gold-light);
+}
+
+.hero-button-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.55);
+
+  color: var(--color-white);
+
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.hero-button-secondary:hover {
+  border-color: var(--color-white);
+
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* =================================
+   SCROLL INDICATOR
+================================= */
+
+.hero-scroll {
+  position: absolute;
+
+  z-index: 3;
+
+  right: 48px;
+  bottom: 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  transform: rotate(-90deg);
+
+  transform-origin: right bottom;
+
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.hero-scroll-line {
+  width: 52px;
+  height: 1px;
+
+  background: var(--color-gold-light);
+}
+
+.hero-scroll-text {
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+}
+
+/* =================================
+   HERO ANIMATIONS
+================================= */
+
+@keyframes heroZoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.07);
+  }
+}
+
+@keyframes heroContentIn {
+  from {
+    opacity: 0;
+
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 900px) {
+  .hero-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(5, 17, 35, 0.84),
+        rgba(5, 17, 35, 0.48)
+      );
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+}
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+  .hero-content {
+    padding-top: 110px;
+    padding-bottom: 80px;
+  }
+
+  .hero-eyebrow {
+    max-width: 320px;
+
+    font-size: 9px;
+
+    line-height: 1.7;
+
+    letter-spacing: 0.17em;
+  }
+
+  .hero-title {
+    font-size: clamp(
+      52px,
+      15vw,
+      78px
+    );
+
+    line-height: 0.96;
+  }
+
+  .hero-description {
+    margin-top: 26px;
+
+    font-size: 16px;
+  }
+
+  .hero-actions {
+    align-items: stretch;
+
+    flex-direction: column;
+
+    max-width: 320px;
+
+    margin-top: 32px;
+  }
+
+  .hero-button {
+    width: 100%;
+  }
+}

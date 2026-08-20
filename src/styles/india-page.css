@@ -1,0 +1,1275 @@
+/* =========================================================
+   YOKOSO THAR DESERT TOURS
+   PREMIUM COUNTRY DESTINATION PAGES
+========================================================= */
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+  --luxury-black: #111111;
+  --luxury-dark: #181818;
+  --luxury-cream: #f8f6f1;
+  --luxury-white: #ffffff;
+  --luxury-gold: #b8955a;
+  --luxury-gold-light: #d8bd88;
+
+  --luxury-text: #171717;
+  --luxury-muted: rgba(23, 23, 23, 0.62);
+
+  --luxury-border: rgba(17, 17, 17, 0.09);
+
+  --luxury-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.10);
+
+  --luxury-shadow-hover:
+    0 35px 90px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.india-page {
+  min-height: 100vh;
+  background:
+    linear-gradient(
+      180deg,
+      #f8f6f1 0%,
+      #f6f3ed 100%
+    );
+
+  color: var(--luxury-text);
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   BACK TO HOME
+========================================================= */
+
+.country-page-nav {
+  position: absolute;
+
+  top: 28px;
+  left: 5%;
+
+  z-index: 20;
+
+  animation:
+    luxuryFadeDown 0.9s ease both;
+}
+
+
+.country-page-nav a {
+  display: inline-flex;
+
+  align-items: center;
+  gap: 10px;
+
+  padding: 11px 17px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.28);
+
+  border-radius: 999px;
+
+  background:
+    rgba(0, 0, 0, 0.18);
+
+  backdrop-filter:
+    blur(12px);
+
+  -webkit-backdrop-filter:
+    blur(12px);
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 0.8px;
+
+  transition:
+    background 0.35s ease,
+    border-color 0.35s ease,
+    transform 0.35s ease;
+}
+
+
+.country-page-nav a:hover {
+  background:
+    rgba(255, 255, 255, 0.14);
+
+  border-color:
+    rgba(255, 255, 255, 0.5);
+
+  transform:
+    translateX(-4px);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.india-page-hero {
+  position: relative;
+
+  min-height: 680px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 120px 5% 100px;
+
+  color: white;
+
+  isolation: isolate;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.38),
+      rgba(0, 0, 0, 0.62)
+    ),
+    url("/images/india/india.jpg")
+    center / cover no-repeat;
+
+  animation:
+    heroReveal 1.2s ease both;
+}
+
+
+/* Cinematic overlay */
+
+.india-page-hero::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: -1;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255, 255, 255, 0.08),
+      transparent 55%
+    );
+
+  pointer-events: none;
+}
+
+
+/* Bottom fade */
+
+.india-page-hero::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 180px;
+
+  background:
+    linear-gradient(
+      transparent,
+      rgba(248, 246, 241, 1)
+    );
+
+  opacity: 0.9;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.india-page-hero-content {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  text-align: center;
+
+  z-index: 2;
+
+  animation:
+    heroContentReveal 1.2s
+    0.15s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+
+.india-page-hero-content .section-label {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  color: white;
+
+  font-size: 11px;
+
+  letter-spacing: 4px;
+
+  font-weight: 600;
+
+  opacity: 0.9;
+
+  animation:
+    luxuryFadeUp 0.9s
+    0.3s
+    ease
+    both;
+}
+
+
+.india-page-hero h1 {
+  margin: 0 0 24px;
+
+  font-size:
+    clamp(58px, 9vw, 118px);
+
+  line-height: 0.94;
+
+  font-weight: 500;
+
+  letter-spacing: -4px;
+
+  text-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.28);
+
+  animation:
+    titleReveal 1.1s
+    0.35s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+
+.india-page-hero p {
+  max-width: 680px;
+
+  margin: 0 auto;
+
+  font-size: 16px;
+
+  line-height: 1.9;
+
+  color:
+    rgba(255, 255, 255, 0.88);
+
+  animation:
+    luxuryFadeUp 1s
+    0.55s
+    ease
+    both;
+}
+
+
+/* =========================================================
+   DESTINATION SECTION
+========================================================= */
+
+.india-page-destinations {
+  position: relative;
+
+  padding:
+    80px 5%
+    120px;
+
+  z-index: 3;
+}
+
+
+.india-page-container {
+  width: 100%;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.india-search {
+  position: relative;
+
+  max-width: 760px;
+
+  margin:
+    0 auto
+    16px;
+
+  animation:
+    luxuryFadeUp 0.9s
+    0.15s
+    ease
+    both;
+}
+
+
+.india-search::before {
+  content: "⌕";
+
+  position: absolute;
+
+  left: 22px;
+
+  top: 50%;
+
+  transform:
+    translateY(-50%);
+
+  z-index: 2;
+
+  color:
+    rgba(0, 0, 0, 0.42);
+
+  font-size: 24px;
+
+  pointer-events: none;
+}
+
+
+.india-search input {
+  width: 100%;
+
+  min-height: 62px;
+
+  padding:
+    18px 24px
+    18px 58px;
+
+  border:
+    1px solid
+    rgba(0, 0, 0, 0.10);
+
+  border-radius: 999px;
+
+  background:
+    rgba(255, 255, 255, 0.88);
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.06);
+
+  color:
+    var(--luxury-text);
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+  outline: none;
+
+  box-sizing: border-box;
+
+  transition:
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    transform 0.35s ease,
+    background 0.35s ease;
+}
+
+
+.india-search input::placeholder {
+  color:
+    rgba(0, 0, 0, 0.42);
+}
+
+
+.india-search input:hover {
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.08);
+}
+
+
+.india-search input:focus {
+  background: white;
+
+  border-color:
+    rgba(184, 149, 90, 0.75);
+
+  box-shadow:
+    0 0 0 5px
+    rgba(184, 149, 90, 0.10),
+    0 20px 55px
+    rgba(0, 0, 0, 0.10);
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* =========================================================
+   RESULT COUNT
+========================================================= */
+
+.india-result-count {
+  margin:
+    0 auto
+    42px;
+
+  text-align: center;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  color:
+    rgba(0, 0, 0, 0.48);
+
+  animation:
+    luxuryFadeUp 0.9s
+    0.25s
+    ease
+    both;
+}
+
+
+/* =========================================================
+   DESTINATION GRID
+========================================================= */
+
+.india-destination-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 30px;
+}
+
+
+/* =========================================================
+   DESTINATION CARD
+========================================================= */
+
+.india-destination-card {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background:
+    rgba(255, 255, 255, 0.96);
+
+  border:
+    1px solid
+    rgba(0, 0, 0, 0.07);
+
+  box-shadow:
+    0 12px 40px
+    rgba(0, 0, 0, 0.055);
+
+  transform:
+    translateY(25px);
+
+  opacity: 0;
+
+  animation:
+    cardReveal
+    0.9s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+
+  transition:
+    transform 0.55s
+      cubic-bezier(0.22, 1, 0.36, 1),
+
+    box-shadow 0.55s ease,
+
+    border-color 0.4s ease;
+}
+
+
+/* stagger */
+
+.india-destination-card:nth-child(1) {
+  animation-delay: 0.08s;
+}
+
+.india-destination-card:nth-child(2) {
+  animation-delay: 0.16s;
+}
+
+.india-destination-card:nth-child(3) {
+  animation-delay: 0.24s;
+}
+
+.india-destination-card:nth-child(4) {
+  animation-delay: 0.32s;
+}
+
+.india-destination-card:nth-child(5) {
+  animation-delay: 0.40s;
+}
+
+.india-destination-card:nth-child(6) {
+  animation-delay: 0.48s;
+}
+
+.india-destination-card:nth-child(7) {
+  animation-delay: 0.56s;
+}
+
+.india-destination-card:nth-child(8) {
+  animation-delay: 0.64s;
+}
+
+.india-destination-card:nth-child(9) {
+  animation-delay: 0.72s;
+}
+
+
+/* hover */
+
+.india-destination-card:hover {
+  transform:
+    translateY(-12px);
+
+  box-shadow:
+    var(--luxury-shadow-hover);
+
+  border-color:
+    rgba(184, 149, 90, 0.28);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.india-card-image {
+  position: relative;
+
+  height: 280px;
+
+  overflow: hidden;
+
+  background:
+    #ddd;
+}
+
+
+/* image */
+
+.india-card-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transform:
+    scale(1.01);
+
+  transition:
+    transform 1.1s
+      cubic-bezier(0.22, 1, 0.36, 1),
+
+    filter 0.6s ease;
+}
+
+
+/* dark image overlay */
+
+.india-card-image::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 50%,
+      rgba(0, 0, 0, 0.30)
+    );
+
+  opacity: 0.55;
+
+  transition:
+    opacity 0.5s ease;
+
+  pointer-events: none;
+}
+
+
+.india-destination-card:hover
+.india-card-image img {
+  transform:
+    scale(1.09);
+
+  filter:
+    saturate(1.08);
+}
+
+
+.india-destination-card:hover
+.india-card-image::after {
+  opacity: 0.8;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.india-card-content {
+  padding: 26px 26px 28px;
+}
+
+
+.india-card-location {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color:
+    var(--luxury-gold);
+
+  font-size: 10px;
+
+  letter-spacing: 2.5px;
+
+  text-transform: uppercase;
+
+  font-weight: 700;
+}
+
+
+.india-card-location::before {
+  content: "";
+
+  width: 18px;
+
+  height: 1px;
+
+  background:
+    var(--luxury-gold);
+}
+
+
+.india-card-content h3 {
+  margin:
+    10px 0 12px;
+
+  font-size: 30px;
+
+  line-height: 1.05;
+
+  font-weight: 500;
+
+  letter-spacing: -0.7px;
+
+  transition:
+    transform 0.35s ease;
+}
+
+
+.india-destination-card:hover
+.india-card-content h3 {
+  transform:
+    translateX(3px);
+}
+
+
+.india-card-content p {
+  min-height: 72px;
+
+  margin:
+    0 0 22px;
+
+  color:
+    var(--luxury-muted);
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.india-card-price {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 0;
+
+  padding:
+    18px 0;
+
+  border-top:
+    1px solid
+    var(--luxury-border);
+
+  border-bottom:
+    1px solid
+    var(--luxury-border);
+}
+
+
+.india-card-price div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+
+.india-card-price div + div {
+  padding-left: 20px;
+
+  border-left:
+    1px solid
+    var(--luxury-border);
+}
+
+
+.india-card-price span {
+  color:
+    rgba(0, 0, 0, 0.45);
+
+  font-size: 10px;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+
+.india-card-price strong {
+  color:
+    var(--luxury-text);
+
+  font-size: 19px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.india-card-button {
+  position: relative;
+
+  width: 100%;
+
+  margin-top: 20px;
+
+  min-height: 52px;
+
+  padding:
+    14px 22px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    var(--luxury-black);
+
+  border-radius: 999px;
+
+  background:
+    var(--luxury-black);
+
+  color: white;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.5px;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+}
+
+
+.india-card-button::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 80%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.22),
+      transparent
+    );
+
+  transform:
+    skewX(-20deg);
+
+  transition:
+    left 0.65s ease;
+}
+
+
+.india-card-button:hover::before {
+  left: 140%;
+}
+
+
+.india-card-button:hover {
+  transform:
+    translateY(-3px);
+
+  background:
+    #202020;
+
+  box-shadow:
+    0 12px 30px
+    rgba(0, 0, 0, 0.20);
+}
+
+
+.india-card-button:active {
+  transform:
+    translateY(-1px);
+}
+
+
+/* =========================================================
+   NO RESULTS
+========================================================= */
+
+.india-no-results {
+  max-width: 700px;
+
+  margin: 30px auto 0;
+
+  padding:
+    90px 25px;
+
+  text-align: center;
+
+  background:
+    rgba(255, 255, 255, 0.85);
+
+  border:
+    1px solid
+    var(--luxury-border);
+
+  border-radius: 20px;
+
+  box-shadow:
+    var(--luxury-shadow);
+
+  animation:
+    luxuryFadeUp 0.7s ease both;
+}
+
+
+.india-no-results h3 {
+  margin:
+    0 0 10px;
+
+  font-size: 28px;
+
+  font-weight: 500;
+}
+
+
+.india-no-results p {
+  margin: 0;
+
+  color:
+    var(--luxury-muted);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .india-page-hero {
+    min-height: 620px;
+  }
+
+  .india-destination-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .country-page-nav {
+    top: 18px;
+    left: 20px;
+  }
+
+
+  .country-page-nav a {
+    padding:
+      9px 14px;
+
+    font-size: 11px;
+  }
+
+
+  .india-page-hero {
+    min-height: 590px;
+
+    padding:
+      100px 20px 90px;
+
+    background-position:
+      center center;
+  }
+
+
+  .india-page-hero h1 {
+    font-size:
+      clamp(52px, 16vw, 76px);
+
+    letter-spacing:
+      -2.5px;
+  }
+
+
+  .india-page-hero p {
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+
+  .india-page-destinations {
+    padding:
+      55px 18px
+      80px;
+  }
+
+
+  .india-page-container {
+    width: 100%;
+  }
+
+
+  .india-search {
+    margin-bottom: 14px;
+  }
+
+
+  .india-search input {
+    min-height: 56px;
+
+    padding:
+      16px 20px
+      16px 52px;
+
+    font-size: 15px;
+  }
+
+
+  .india-result-count {
+    margin-bottom: 30px;
+  }
+
+
+  .india-destination-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 24px;
+  }
+
+
+  .india-destination-card {
+    border-radius: 18px;
+  }
+
+
+  .india-card-image {
+    height: 230px;
+  }
+
+
+  .india-card-content {
+    padding:
+      22px;
+  }
+
+
+  .india-card-content h3 {
+    font-size: 27px;
+  }
+
+
+  .india-card-content p {
+    min-height: auto;
+
+    font-size: 13.5px;
+  }
+
+
+  .india-card-button {
+    min-height: 50px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .india-page-hero {
+    min-height: 540px;
+  }
+
+
+  .india-page-hero h1 {
+    font-size: 51px;
+
+    letter-spacing: -2px;
+  }
+
+
+  .india-page-hero p {
+    max-width: 330px;
+
+    font-size: 13.5px;
+  }
+
+
+  .india-card-image {
+    height: 205px;
+  }
+
+
+  .india-card-content {
+    padding: 19px;
+  }
+
+
+  .india-card-content h3 {
+    font-size: 24px;
+  }
+
+
+  .india-card-price {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .india-card-price div + div {
+    padding-left: 0;
+
+    padding-top: 14px;
+
+    border-left: 0;
+
+    border-top:
+      1px solid
+      var(--luxury-border);
+  }
+
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes heroReveal {
+
+  from {
+    opacity: 0;
+    transform: scale(1.025);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+
+@keyframes heroContentReveal {
+
+  from {
+    opacity: 0;
+    transform:
+      translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+@keyframes titleReveal {
+
+  from {
+    opacity: 0;
+    transform:
+      translateY(50px)
+      scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+}
+
+
+@keyframes luxuryFadeUp {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+@keyframes luxuryFadeDown {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(-15px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+@keyframes cardReveal {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration:
+      0.01ms !important;
+
+    animation-iteration-count:
+      1 !important;
+
+    transition-duration:
+      0.01ms !important;
+
+    scroll-behavior:
+      auto !important;
+  }
+
+}
